@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Test Layout</title>
+        <meta charset = "UTF-8">
+        <meta name = "viewport" content = "width=device-width, initial-scale=1">
+        <link rel = "stylesheet" href = "webStyle.css">
+    </head>
+
+    <!-- http://localhost:3000/-->
+    <script src="/socket.io/socket.io.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script>
+    
+    <body>
+        <div class="wrapper">       
+            <!-- Menu -->
+            <ul id="topBar">
+                <li id="urlHolder">
+                    <input id="url" type = "text" placeholder="Paste a YouTube link">
+                </li>
+        
+                <!-- Room dropdown element -->
+                <li id="roomMenuHolder">
+                    <div id="roomMenu">
+                        <span>Room</span>
+                    </div>
+                    <!-- Dropdown contents -->
+                    <ul id="roomDropDown">
+                        <li id="membersCount">
+                            # members
+                        </li>
+                        <li id="roomURL">
+                            <a href="#">Room's URL</a>
+                        </li>
+                        <li id="roomURLHint">
+                            (click to copy)
+                        </li>
+                    </ul>
+        
+                </li>
+            </ul>
+        
+            <div id="buttonBlock">
+                <span>
+                    Watch
+                </span>
+            </div>
+        
+            <!-- Content -->
+            <div id="content">
+                <iframe id="video" src="https://www.youtube.com/embed/InbaU387Wl8">
+                </iframe>
+            </div>
+        </div>
+    </body>
+</html>

@@ -1,0 +1,102 @@
+*{box-sizing: border-box;}
+
+body {
+    margin: 0;
+    font-family: verdana;
+    background-color: hsl(0, 0%, 61%);
+}
+.wrapper{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+    width: 100%;
+    overflow: hidden;
+    min-height: 100vh;
+    background-image: url("def.png");
+    background-repeat: no-repeat;
+    background-position: center;
+}
+ul#topBar{
+    list-style-type: none;
+    margin: 2px; padding: 0px;
+    width: 100%;
+}
+ul#topBar > li{
+    float: left;
+    height: 6vh;
+}
+li#urlHolder{width: 80%;}
+li#roomMenuHolder{width: 20%;}
+input#url{
+    border: none;
+    background-color: white;
+    width: 100%; height: 100%;
+    font-size: 2vw; text-indent: 1%;
+    transition: background-color 0.3s ease-in-out;
+}
+input#url::placeholder{
+    color: hsl(0, 0%, 50%);
+    transition: color 0.3s ease-in-out;
+}
+input#url:focus{
+    background-color: hsl(0, 79%, 44%);
+    outline: none;
+}
+input#url:focus::placeholder{
+    color: hsl(0, 79%, 44%);
+}
+div#roomMenu{
+    position: relative;
+    display: flex;
+    color: white;
+    background-color: hsl(0, 79%, 44%);
+    width: 100%; height: 100%;
+    font-size: 2vw;
+    justify-content: center;
+    align-items: center;
+}
+li#roomMenuHolder:hover ul#roomDropDown{
+    display: block;
+}
+ul#roomDropDown{
+    position: absolute;
+    display: none;
+    background-color: hsl(50, 90%, 50%);
+    width: 19.75%;
+    list-style-type: none;
+    margin: none; padding: 2px 0px 5px 0px;
+    text-align: center;
+}
+li#membersCount{
+    color: hsl(13, 90%, 50%);
+    font-size: 2vw;
+    padding-bottom: 10px;
+}
+div#buttonBlock{
+    display: none;  /*designed to be flex*/
+    width: 100%; height: 5vh;
+    justify-content: center;
+    align-items: center;
+    background-color: white;
+    color: hsl(0, 79%, 44%);
+    transition: 0.5s;
+}
+div#buttonBlock:hover{
+    background-color: rgb(255, 218, 218);
+    cursor: pointer;
+}
+div#content{
+    display: flex;
+    overflow: hidden;
+    margin: 10px;
+    width: 94vw; height: 90vh;
+    align-items: center;
+    justify-content: center;
+}
+iframe#video{
+    border: none;
+    display: block;
+    width: 80%;
+    height: 80%;
+}
