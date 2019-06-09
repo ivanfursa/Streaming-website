@@ -1,3 +1,6 @@
+// Make connetion
+var socket = io.connect("http://localhost:3000");
+
 $(function () {
     // If something is inputted, show button
     var input = $("#url");  //if by tag name - don't add hashtag
@@ -12,6 +15,13 @@ $(function () {
         }
     });
 
+    video.on("play", function(){
+        socket.emit('playVideo');
+    });
+    video.on("pause", function(){
+        socket.emit('pauseVideo');
+    });
+
     button.click(function() {
         var url = String(input.val()).trim();
         if (url.indexOf("https://www.youtube.com/watch?v=") == 0) {
@@ -24,6 +34,16 @@ $(function () {
         }
         input.val("");
         button.hide();
+        socket.emit('linkSent', url);
+    });
+
+    // Listening to events
+    socket.on('pauseVideo', function(){
+        video.pause();
+    });
+
+    socket.on('playVideo', function(){
+        video.play();
     });
 });
 
