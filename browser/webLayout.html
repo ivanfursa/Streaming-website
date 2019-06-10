@@ -10,6 +10,8 @@
     <!-- http://localhost:3000/-->
     <script src="/socket.io/socket.io.js"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script>
+    <!-- Client-side JavaScript -->
+    <script src="control.js"></script>
     
     <body>
         <div class="wrapper">       
@@ -24,6 +26,7 @@
                     <div id="roomMenu">
                         <span>Room</span>
                     </div>
+
                     <!-- Dropdown contents -->
                     <ul id="roomDropDown">
                         <li id="membersCount">
@@ -40,19 +43,19 @@
                 </li>
             </ul>
         
+            <!-- Button to send url request -->
             <div id="buttonBlock">
                 <span>
                     Watch
                 </span>
             </div>
         
-            <!-- Content -->
+            <!-- Video Content -->
             <div id="content">
-                <iframe id="video" src="http://localhost:3000/video">
-                </iframe>
+                <video id="video" src="http://localhost:3000/video">
             </div>
+
         </div>
     </body>
 
-    <script src="control.js"></script>
 </html>

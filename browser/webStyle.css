@@ -94,7 +94,7 @@ div#content{
     align-items: center;
     justify-content: center;
 }
-iframe#video{
+video#video{
     border: none;
     display: block;
     width: 80%;
